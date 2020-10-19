@@ -1,1 +1,2858 @@
-<script type="text/javascript" src="https://birdeye.com/embed/v1/151134205012586/1/3571984305/uaz9WymF7BbRUISTcqD1ALeyfYSNAfy4"></script><div id="bf-revz-widget-3571984305"></div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"bb8d113d51",applicationID:"148521933"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="pingback" href="https://dev-jumpstartmd.pantheonsite.io/xmlrpc.php">
+
+    <link rel="shortcut icon" href="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/cropped-JumpstartMD-favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/cropped-JumpstartMD-favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/cropped-JumpstartMD-favicon-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/cropped-JumpstartMD-favicon-270x270.png" />
+
+    <script src="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/js/vendor/webfontloader.js"></script>
+    <script>
+    WebFont.load({
+        custom: {
+            families: ['GalanoGrotesque-Regular', 'Bebas'],
+        },
+        active: function() {
+            if (typeof window.Environment != 'undefined')
+                Environment._fontsLoaded();
+        }
+    });
+    </script>
+
+    
+    <!-- This site is optimized with the Yoast SEO Premium plugin v14.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>Weight Loss Clinic in Marin | JumpstartMD</title>
+    <meta name="description" content="Our Marin weight loss clinic is conveniently located at Bon Air Center in Greenbrae and has extended and weekend hours as well as a range of services to support you. Learn more." />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://dev-jumpstartmd.pantheonsite.io/locations/marin/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Weight Loss Clinic in Marin | JumpstartMD" />
+    <meta property="og:description" content="Our Marin weight loss clinic is conveniently located at Bon Air Center in Greenbrae and has extended and weekend hours as well as a range of services to support you. Learn more." />
+    <meta property="og:url" content="https://dev-jumpstartmd.pantheonsite.io/locations/marin/" />
+    <meta property="og:site_name" content="Jumpstart MD" />
+    <meta property="article:publisher" content="https://www.facebook.com/JumpstartMD/" />
+    <meta property="article:modified_time" content="2020-10-01T00:19:21+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dev-jumpstartmd.pantheonsite.io/#organization","name":"Jumpstart MD","url":"https://dev-jumpstartmd.pantheonsite.io/","sameAs":["https://www.facebook.com/JumpstartMD/","https://www.instagram.com/jumpstartmd/","https://www.youtube.com/user/JumpstartMD"],"logo":{"@type":"ImageObject","@id":"https://dev-jumpstartmd.pantheonsite.io/#logo","inLanguage":"en-US","url":"https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2020/04/jsmdlogo.png","width":475,"height":106,"caption":"Jumpstart MD"},"image":{"@id":"https://dev-jumpstartmd.pantheonsite.io/#logo"}},{"@type":"WebSite","@id":"https://dev-jumpstartmd.pantheonsite.io/#website","url":"https://dev-jumpstartmd.pantheonsite.io/","name":"Jumpstart MD","description":"Medical Weight Loss &amp; Wellness Coaching","publisher":{"@id":"https://dev-jumpstartmd.pantheonsite.io/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://dev-jumpstartmd.pantheonsite.io/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://dev-jumpstartmd.pantheonsite.io/locations/marin/#webpage","url":"https://dev-jumpstartmd.pantheonsite.io/locations/marin/","name":"Weight Loss Clinic in Marin | JumpstartMD","isPartOf":{"@id":"https://dev-jumpstartmd.pantheonsite.io/#website"},"datePublished":"2018-02-05T23:58:36+00:00","dateModified":"2020-10-01T00:19:21+00:00","description":"Our Marin weight loss clinic is conveniently located at Bon Air Center in Greenbrae and has extended and weekend hours as well as a range of services to support you. Learn more.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://dev-jumpstartmd.pantheonsite.io/locations/marin/"]}]}]}</script>
+    <!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//dev-jumpstartmd.pantheonsite.io' />
+<link rel='dns-prefetch' href='//netdna.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Jumpstart MD &raquo; Feed" href="https://dev-jumpstartmd.pantheonsite.io/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Jumpstart MD &raquo; Comments Feed" href="https://dev-jumpstartmd.pantheonsite.io/comments/feed/" />
+        <script type="text/javascript">
+            window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/dev-jumpstartmd.pantheonsite.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
+            !function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+        </script>
+        <style type="text/css">
+img.wp-smiley,
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+</style>
+    <link rel='stylesheet' id='testimonial-rotator-style-css'  href='https://dev-jumpstartmd.pantheonsite.io/wp-content/plugins/testimonial-rotator/testimonial-rotator-style.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='//netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css?ver=5.5.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://dev-jumpstartmd.pantheonsite.io/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://dev-jumpstartmd.pantheonsite.io/wp-content/plugins/testimonial-rotator/js/jquery.cycletwo.js?ver=5.5.1' id='cycletwo-js'></script>
+<script type='text/javascript' src='https://dev-jumpstartmd.pantheonsite.io/wp-content/plugins/testimonial-rotator/js/jquery.cycletwo.addons.js?ver=5.5.1' id='cycletwo-addons-js'></script>
+<link rel="https://api.w.org/" href="https://dev-jumpstartmd.pantheonsite.io/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dev-jumpstartmd.pantheonsite.io/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://dev-jumpstartmd.pantheonsite.io/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5.1" />
+<link rel='shortlink' href='https://dev-jumpstartmd.pantheonsite.io/?p=245' />
+<link rel="alternate" type="application/json+oembed" href="https://dev-jumpstartmd.pantheonsite.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdev-jumpstartmd.pantheonsite.io%2Flocations%2Fmarin%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://dev-jumpstartmd.pantheonsite.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdev-jumpstartmd.pantheonsite.io%2Flocations%2Fmarin%2F&#038;format=xml" />
+
+<!-- Call Now Button 0.4.0 by Jerry Rietveld (callnowbutton.com) -->
+<style>#callnowbutton {display:none;} @media screen and (max-width:650px){#callnowbutton {display:block; position:fixed; text-decoration:none; z-index:2147483647;width:65px; height:65px; border-radius:50%; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);transform: scale(1);bottom:15px; left:20px;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNjAgNjAiPjxwYXRoIGQ9Ik03LjEwNCAxNC4wMzJsMTUuNTg2IDEuOTg0YzAgMC0wLjAxOSAwLjUgMCAwLjk1M2MwLjAyOSAwLjc1Ni0wLjI2IDEuNTM0LTAuODA5IDIuMSBsLTQuNzQgNC43NDJjMi4zNjEgMy4zIDE2LjUgMTcuNCAxOS44IDE5LjhsMTYuODEzIDEuMTQxYzAgMCAwIDAuNCAwIDEuMSBjLTAuMDAyIDAuNDc5LTAuMTc2IDAuOTUzLTAuNTQ5IDEuMzI3bC02LjUwNCA2LjUwNWMwIDAtMTEuMjYxIDAuOTg4LTI1LjkyNS0xMy42NzRDNi4xMTcgMjUuMyA3LjEgMTQgNy4xIDE0IiBmaWxsPSIjMmU1OGMyIi8+PHBhdGggZD0iTTcuMTA0IDEzLjAzMmw2LjUwNC02LjUwNWMwLjg5Ni0wLjg5NSAyLjMzNC0wLjY3OCAzLjEgMC4zNWw1LjU2MyA3LjggYzAuNzM4IDEgMC41IDIuNTMxLTAuMzYgMy40MjZsLTQuNzQgNC43NDJjMi4zNjEgMy4zIDUuMyA2LjkgOS4xIDEwLjY5OWMzLjg0MiAzLjggNy40IDYuNyAxMC43IDkuMSBsNC43NC00Ljc0MmMwLjg5Ny0wLjg5NSAyLjQ3MS0xLjAyNiAzLjQ5OC0wLjI4OWw3LjY0NiA1LjQ1NWMxLjAyNSAwLjcgMS4zIDIuMiAwLjQgMy4xMDVsLTYuNTA0IDYuNSBjMCAwLTExLjI2MiAwLjk4OC0yNS45MjUtMTMuNjc0QzYuMTE3IDI0LjMgNy4xIDEzIDcuMSAxMyIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==) center/45px 45px no-repeat #4c76e0;}}#callnowbutton span{display:none;}</style>
+
+        <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1944142,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+        <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style>.alert_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3774b5;
+    z-index: 4;
+    height: 55px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+}
+
+@media only screen and (max-width:769px) {
+    .alert_bar {
+        height: 70px
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .alert_bar {
+        position: fixed
+    }
+}
+
+.alert_bar .alert_inner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 1296px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 55px;
+    width: 100%;
+    text-align: center;
+}
+
+.alert_bar .alert_inner p {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 35px;
+    margin: 0;
+    font-family: 'GalanoGrotesque-Regular';
+    text-transform: uppercase;
+}
+
+.alert_bar .alert_inner p a {
+    margin-left: 18px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.alert_bar .alert_inner p a:hover {
+    color: #143e6a
+}
+
+.alert_bar .alert_inner a {
+    color: #fff
+}
+
+.alert_bar .alert_inner .close {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: 'GalanoGrotesque-Light';
+    font-size: 26px;
+    line-height: 26px;
+    margin-top: -2px;
+    padding: 10px;
+    font-weight: 300;
+    text-decoration: none;
+    z-index: 5
+}
+
+.alert_bar .alert_inner .alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: calc(100% - 70px)
+}
+
+@media only screen and (min-width:900px) {
+    .alert_bar .alert_inner .alert.mobile_alert {
+        display: none
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .alert_bar .alert_inner {
+        height: 70px
+    }
+
+    .alert_bar .alert_inner .alert.desktop_alert {
+        display: none
+    }
+
+    .alert_bar .alert_inner p {
+        font-size: 13px;
+        line-height: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+    }
+
+    .alert_bar .alert_inner p a {
+        font-size: 13px;
+        line-height: 18px
+    }
+
+    .alert_bar .alert_inner .close {
+        right: 5px;
+        top: 26px;
+        font-size: 28px
+    }
+}
+
+.show_alert_bar .alert_bar {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.show_alert_bar .site_container {
+    padding-top: 155px
+}
+
+.show_alert_bar header {
+    top: 55px
+}
+
+@media only screen and (max-width:900px) {
+    .show_alert_bar .site_container {
+        padding-top: 140px
+    }
+
+    .show_alert_bar header {
+        top: 70px;
+        height: 70px
+    }
+}
+
+@media only screen and (min-width:769px) {
+    .alert_bar_shown header {
+        -webkit-transition: none;
+        transition: none
+    }
+}
+
+#basic_page_hero {
+    height: 580px;
+    overflow: hidden;
+    position: relative;
+}
+
+#basic_page_hero .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+#basic_page_hero .image.loaded {
+    opacity: 1;
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none
+}
+
+#basic_page_hero div.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px 40px 20px;
+}
+
+#basic_page_hero div.title:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: .85;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    filter: alpha(opacity=85)
+}
+
+#basic_page_hero div.title .title_content {
+    z-index: 1;
+    position: relative;
+    width: auto;
+    max-width: 1140px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#basic_page_hero div.title .title_content:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+#basic_page_hero div.title .title_content h3:first-child {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 44px 0 15px 0;
+}
+
+@media only screen and (max-width:1025px) {
+    #basic_page_hero div.title .title_content h3:first-child {
+        font-size: 22px;
+        margin: 13px 0
+    }
+}
+
+#basic_page_hero div.title .title_content a {
+    color: #ef9021;
+    text-decoration: none;
+    font-weight: normal
+}
+
+#basic_page_hero.compact {
+    height: auto;
+}
+
+#basic_page_hero.compact div.title {
+    position: relative;
+    padding: 30px 20px 30px 20px;
+    margin-top: 275px;
+}
+
+#basic_page_hero.compact div.title .title_content *:first-child {
+    margin-top: 0
+}
+
+#basic_page_hero.left-box div.title {
+    margin-top: 100px;
+    margin-right: 50%;
+    width: 45%;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+#basic_page_hero.left-box div.title div.responsive-text {
+    word-spacing: 1vw;
+    font-family: 'Bebas';
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 3vw
+}
+
+@media only screen and (max-width:1025px) {
+    #basic_page_hero {
+        height: auto;
+        min-height: 140px
+    }
+
+    #basic_page_hero .image {
+        position: static;
+        height: 250px
+    }
+
+    #basic_page_hero div.title {
+        padding: 10px 20px 20px 20px;
+        height: auto;
+        width: 100%;
+        position: relative
+    }
+
+    #basic_page_hero.compact {
+        height: auto;
+    }
+
+    #basic_page_hero.compact div.title {
+        padding: 20px 20px 20px 20px;
+        margin-top: 0;
+    }
+
+    #basic_page_hero.compact div.title h3:last-child {
+        margin-bottom: 4px
+    }
+
+    #basic_page_hero.compact div.title div.responsive-text {
+        font-size: 3em
+    }
+
+    #basic_page_hero.left-box div.title {
+        margin: 0;
+        width: 100%
+    }
+}
+
+.button {
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20.8px;
+    line-height: 19.200000000000003px;
+    letter-spacing: -.4px;
+    padding: 1em 3.5em;
+    display: inline-block;
+    margin: 20px 0;
+    font-family: 'GalanoGrotesque-Regular';
+    font-weight: 500;
+    font-weight: 300 !important;
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s;
+}
+
+.button.orange {
+    background-color: #ef9021;
+    color: #fff;
+}
+
+.button.orange:hover,.button.orange:focus {
+    background-color: #eb6723
+}
+
+.button.white {
+    background-color: #fff;
+    border: 1px solid #ef9021;
+    color: #ef9021
+}
+
+.button.small {
+    font-size: 12.8px;
+    line-height: 11.200000000000001px;
+    padding: 13px 21px
+}
+
+.button.medium {
+    font-size: 17.6px;
+    line-height: 25.6px;
+    padding: 10px 25px;
+    min-width: 230px;
+    text-align: center
+}
+
+.button.with_icon {
+    padding-left: 45px
+}
+
+@media only screen and (max-width:1025px) {
+    .button {
+        font-size: 13.600000000000001px;
+        line-height: 12px;
+        padding: .6em 2.5em
+    }
+
+    .button.medium {
+        font-size: 13.600000000000001px;
+        line-height: 12px;
+        padding: .8em 1.5em
+    }
+}
+
+.icon_button {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    text-indent: -9999px;
+}
+
+.icon_button.plus {
+    background-image: url("/wp-content/themes/jumpstart/images/icon_plus.svg")
+}
+
+.icon_button.simple_plus {
+    background-image: url("/wp-content/themes/jumpstart/images/icon_plus_simple.svg");
+    width: 1.5rem;
+    height: 1.5rem
+}
+
+.icon_button.close {
+    background-image: url("/wp-content/themes/jumpstart/images/icon_close.svg");
+    width: 4.25rem;
+    height: 4.25rem
+}
+
+@media only screen and (max-width:1025px) {
+    .icon_button.close {
+        width: 3.5rem;
+        height: 3.5rem
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .icon_button.close {
+        width: 1.75rem;
+        height: 1.75rem
+    }
+}
+
+.download_button {
+    font-size: 18px;
+    line-height: 26px;
+    background-color: transparent;
+    border: none;
+    background-image: url("/wp-content/themes/jumpstart/images/download.svg");
+    background-position: left 50%;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding-left: 4.5rem;
+    color: #ef9021;
+    display: block;
+    padding-top: 3px;
+    min-height: 31px
+}
+
+.more {
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+    background-color: transparent;
+    border: none;
+    background-image: url("/wp-content/themes/jumpstart/images/icon_more.svg");
+    background-position: right 1px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding-right: 4rem;
+    color: #ef9021;
+    display: block;
+    padding-top: 3px;
+    min-height: 31px;
+}
+
+.more.left {
+    padding-left: 4.5rem;
+    padding-right: 0;
+    background-position: left 1px
+}
+
+@media only screen and (min-width:1440px) {
+    .more {
+        font-size: 16px;
+        line-height: 23px
+    }
+}
+
+@media only screen and (max-width:1025px) {
+    .more {
+        font-size: 18px;
+        line-height: 26px
+    }
+}
+
+header {
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 3;
+    -webkit-transition: top .5s;
+    transition: top .5s;
+}
+
+header .row {
+    height: 100px;
+    position: relative;
+}
+
+@media only screen and (max-width:1025px) {
+    header .row {
+        height: 65px
+    }
+}
+
+header div.login {
+    position: absolute;
+    top: 8px;
+    right: 47px;
+}
+
+@media only screen and (max-width:1025px) {
+    header div.login {
+        display: none
+    }
+}
+
+header div.login > * {
+    float: left
+}
+
+header div.login p {
+    font-size: 16px;
+    color: #000;
+    margin-top: 12px
+}
+
+header div.login h4 {
+    color: #ef9021;
+    margin: 5px 0 0 0;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+header div.login h4 a {
+    color: #ef9021;
+    text-decoration: none
+}
+
+header div.login .button {
+    margin: 3px 18px;
+    background-image: url("/wp-content/themes/jumpstart/images/login_icon.svg");
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 23px 25px;
+    border: none
+}
+
+header div.login .physician_link {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px
+}
+
+header .logo {
+    position: absolute;
+    bottom: 32px;
+    left: 3rem;
+    width: 290px;
+    height: 48px;
+}
+
+@media only screen and (max-width:1025px) {
+    header .logo {
+        width: 190px;
+        height: 32px;
+        bottom: 18px
+    }
+}
+
+header #menu_toggle {
+    background: none;
+    border: none;
+    width: 47px;
+    height: 31px;
+    position: absolute;
+    bottom: 12px;
+    right: 3rem;
+    display: none;
+    z-index: 3;
+}
+
+@media only screen and (max-width:1025px) {
+    header #menu_toggle {
+        display: block
+    }
+}
+
+header #menu_toggle:before {
+    content: ' ';
+    background-image: url("/wp-content/themes/jumpstart/images/hamburger.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s
+}
+
+header #menu_toggle:after {
+    content: ' ';
+    background-image: url("/wp-content/themes/jumpstart/images/hamburger_active.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s
+}
+
+header #menu_toggle.active:after {
+    opacity: 1;
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none
+}
+
+header #menu_toggle.active:before {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0)
+}
+
+@media only screen and (max-width:1025px) {
+    header {
+        height: 70px
+    }
+}
+
+.wellness_tips {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: #ef9021;
+    color: #fff;
+    font-size: 13.600000000000001px;
+    line-height: 48px;
+    height: 48px;
+    padding-left: 5rem;
+    padding-right: 1.5rem;
+    z-index: 3;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s;
+}
+
+.wellness_tips:focus {
+    background-color: #eb6723
+}
+
+@media only screen and (max-width:1025px) {
+    .wellness_tips {
+        display: none
+    }
+}
+
+.wellness_tips:before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 1rem;
+    height: 36px;
+    width: 36px;
+    background-image: url("/wp-content/themes/jumpstart/images/icon_more_transparent.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+#hero_container {
+    height: calc(100vh - 265px);
+}
+
+@media screen and (min-widht:601px) {
+    #hero_container {
+        display: block
+    }
+}
+
+@media screen and (max-width:600px) {
+    #hero_container {
+        display: none
+    }
+}
+
+#hero_container #hero {
+    height: calc(100vh - 265px);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#hero_container #hero .slide {
+    height: calc(100vh - 265px);
+    position: relative;
+}
+
+#hero_container #hero .slide .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+#hero_container #hero .slide .image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)
+}
+
+#hero_container #hero .slide .row {
+    padding: 0 3rem
+}
+
+#hero_container #hero .slide .content {
+    z-index: 1;
+    position: relative;
+    padding-top: 3rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#hero_container #hero .slide .content p {
+    margin: 0
+}
+
+#hero_container #hero .slide .content h1,#hero_container #hero .slide .content h3 {
+    color: #fff
+}
+
+#hero_container #hero .slide .content h1 {
+    font-size: 115.2px;
+    line-height: 124.80000000000001px;
+    margin-bottom: 30px;
+    letter-spacing: -3px
+}
+
+#hero_container #hero .slide .content h3 {
+    font-family: 'GalanoGrotesque-Light';
+    font-size: 28.8px;
+    line-height: 32.800000000000004px;
+    letter-spacing: -.25px;
+    padding-right: 675px
+}
+
+@media screen and (max-height:750px) {
+    #hero_container #hero .slide .content {
+        padding-top: 5rem
+    }
+
+    #hero_container #hero .slide .content h1 {
+        font-size: 88px;
+        line-height: 96px;
+        margin-bottom: 12px
+    }
+
+    #hero_container #hero .slide .content h3 {
+        font-size: 20.8px;
+        line-height: 22.400000000000002px
+    }
+
+    #hero_container #hero .slide .content .button {
+        margin-top: 8px;
+        font-size: 18.400000000000002px;
+        line-height: 16.8px;
+        padding: .8em 3em
+    }
+}
+
+@media only screen and (max-width:769px) {
+    #hero_container #hero .slide .content {
+        padding-top: 5rem
+    }
+
+    #hero_container #hero .slide .content h1 {
+        font-size: 88px;
+        line-height: 96px;
+        margin-bottom: 12px
+    }
+
+    #hero_container #hero .slide .content h3 {
+        font-size: 20.8px;
+        line-height: 22.400000000000002px
+    }
+
+    #hero_container #hero .slide .content .button {
+        margin-top: 8px;
+        font-size: 18.400000000000002px;
+        line-height: 16.8px;
+        padding: .8em 3em
+    }
+}
+
+@media only screen and (max-width:450px) {
+    #hero_container #hero .slide .content {
+        padding-top: 5rem
+    }
+
+    #hero_container #hero .slide .content h1 {
+        font-size: 43.2px;
+        line-height: 48px;
+        margin-bottom: 12px
+    }
+
+    #hero_container #hero .slide .content h3 {
+        font-size: 12.8px;
+        line-height: 14.4px
+    }
+
+    #hero_container #hero .slide .content .button {
+        margin-top: 8px;
+        font-size: 13.600000000000001px;
+        line-height: 12px;
+        padding: .6em 2.5em
+    }
+}
+
+#hero_container #hero_content {
+    height: calc(100vh - 265px);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#hero_container #hero_content .row {
+    padding: 0 3em
+}
+
+#hero_container #hero_content .content {
+    z-index: 2;
+    position: relative;
+    padding-top: 3rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#hero_container #hero_content .content p {
+    margin: 0;
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.4px;
+    line-height: 17.6px;
+    padding-right: 55%
+}
+
+#hero_container #hero_content .content h1,#hero_container #hero_content .content h3 {
+    color: #fff
+}
+
+#hero_container #hero_content .content h1 {
+    font-size: 115.2px;
+    line-height: 124.80000000000001px;
+    margin-bottom: 30px;
+    letter-spacing: -3px
+}
+
+#hero_container #hero_content .content h3 {
+    font-family: 'GalanoGrotesque-Light';
+    font-size: 28.8px;
+    line-height: 32.800000000000004px;
+    letter-spacing: -.25px;
+    padding-right: 60%
+}
+
+@media screen and (max-height:750px) {
+    #hero_container #hero_content .content {
+        padding-top: 5rem
+    }
+
+    #hero_container #hero_content .content p {
+        font-size: 10.4px;
+        line-height: 11.200000000000001px
+    }
+
+    #hero_container #hero_content .content h1 {
+        font-size: 88px;
+        line-height: 96px;
+        margin-bottom: 12px
+    }
+
+    #hero_container #hero_content .content h3 {
+        font-size: 20.8px;
+        line-height: 22.400000000000002px
+    }
+
+    #hero_container #hero_content .content .button {
+        margin-top: 8px;
+        font-size: 18.400000000000002px;
+        line-height: 16.8px;
+        padding: .8em 3em
+    }
+}
+
+@media only screen and (max-width:769px) {
+    #hero_container #hero_content .content {
+        padding-top: 5rem
+    }
+
+    #hero_container #hero_content .content p {
+        font-size: 10.4px;
+        line-height: 11.200000000000001px
+    }
+
+    #hero_container #hero_content .content h1 {
+        font-size: 88px;
+        line-height: 96px;
+        margin-bottom: 12px
+    }
+
+    #hero_container #hero_content .content h3 {
+        font-size: 20.8px;
+        line-height: 22.400000000000002px
+    }
+
+    #hero_container #hero_content .content .button {
+        margin-top: 8px;
+        font-size: 18.400000000000002px;
+        line-height: 16.8px;
+        padding: .8em 3em
+    }
+}
+
+@media only screen and (max-width:450px) {
+    #hero_container #hero_content .content {
+        padding-top: 5rem
+    }
+
+    #hero_container #hero_content .content p {
+        font-size: 10.4px;
+        line-height: 11.200000000000001px
+    }
+
+    #hero_container #hero_content .content h1 {
+        font-size: 43.2px;
+        line-height: 48px;
+        margin-bottom: 12px
+    }
+
+    #hero_container #hero_content .content h3 {
+        font-size: 12.8px;
+        line-height: 14.4px
+    }
+
+    #hero_container #hero_content .content .button {
+        margin-top: 8px;
+        font-size: 13.600000000000001px;
+        line-height: 12px;
+        padding: .6em 2.5em
+    }
+}
+
+#mobile_hero_container {
+    width: 100%;
+    min-height: calc(100vw * 1.41);
+    overflow: hidden;
+}
+
+@media screen and (max-width:600px) {
+    #mobile_hero_container {
+        display: block
+    }
+}
+
+@media screen and (min-width:601px) {
+    #mobile_hero_container {
+        display: none
+    }
+}
+
+#mobile_hero_container #mobile_hero {
+    position: relative;
+    min-height: calc(100vw * 1.41);
+    z-index: 1;
+}
+
+#mobile_hero_container #mobile_hero .slide {
+    position: relative;
+    min-height: calc(100vw * 1.41);
+}
+
+#mobile_hero_container #mobile_hero .slide .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+#mobile_hero_container #mobile_hero .slide .image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,0.8)), to(rgba(0,0,0,0)));
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)
+}
+
+#mobile_hero_container #mobile_hero .slide .row {
+    padding: 0 3rem
+}
+
+#mobile_hero_container #mobile_hero .slide .content {
+    z-index: 1;
+    position: relative;
+    padding-top: 3rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#mobile_hero_container #mobile_hero .slide .content p {
+    margin: 0
+}
+
+#mobile_hero_container #mobile_hero .slide .content h1,#mobile_hero_container #mobile_hero .slide .content h3 {
+    color: #fff
+}
+
+#mobile_hero_container #mobile_hero .slide .content h1 {
+    font-size: 115.2px;
+    line-height: 124.80000000000001px;
+    margin-bottom: 30px;
+    letter-spacing: -3px
+}
+
+#mobile_hero_container #mobile_hero .slide .content h3 {
+    font-family: 'GalanoGrotesque-Light';
+    font-size: 28.8px;
+    line-height: 32.800000000000004px;
+    letter-spacing: -.25px;
+    padding-right: 675px
+}
+
+@media screen and (max-height:750px) {
+    #mobile_hero_container #mobile_hero .slide .content {
+        padding-top: 5rem
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content h1 {
+        font-size: 88px;
+        line-height: 96px;
+        margin-bottom: 12px
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content h3 {
+        font-size: 20.8px;
+        line-height: 22.400000000000002px
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content .button {
+        margin-top: 8px;
+        font-size: 18.400000000000002px;
+        line-height: 16.8px;
+        padding: .8em 3em
+    }
+}
+
+@media only screen and (max-width:769px) {
+    #mobile_hero_container #mobile_hero .slide .content {
+        padding-top: 5rem
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content h1 {
+        font-size: 88px;
+        line-height: 96px;
+        margin-bottom: 12px
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content h3 {
+        font-size: 20.8px;
+        line-height: 22.400000000000002px
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content .button {
+        margin-top: 8px;
+        font-size: 18.400000000000002px;
+        line-height: 16.8px;
+        padding: .8em 3em
+    }
+}
+
+@media only screen and (max-width:450px) {
+    #mobile_hero_container #mobile_hero .slide .content {
+        padding-top: 5rem
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content h1 {
+        font-size: 43.2px;
+        line-height: 48px;
+        margin-bottom: 12px
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content h3 {
+        font-size: 12.8px;
+        line-height: 14.4px
+    }
+
+    #mobile_hero_container #mobile_hero .slide .content .button {
+        margin-top: 8px;
+        font-size: 13.600000000000001px;
+        line-height: 12px;
+        padding: .6em 2.5em
+    }
+}
+
+#mobile_hero_container #mobile_hero_content {
+    height: calc(100vh - 265px);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#mobile_hero_container #mobile_hero_content .row {
+    padding: 0 3em;
+}
+
+@media only screen and (max-width:450px) {
+    #mobile_hero_container #mobile_hero_content .row {
+        padding: 0 2em
+    }
+}
+
+#mobile_hero_container #mobile_hero_content .content {
+    z-index: 2;
+    position: relative;
+    margin-top: 60%;
+}
+
+#mobile_hero_container #mobile_hero_content .content p {
+    margin: 0;
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.4px;
+    line-height: 17.6px
+}
+
+#mobile_hero_container #mobile_hero_content .content h1,#mobile_hero_container #mobile_hero_content .content h3 {
+    color: #fff
+}
+
+#mobile_hero_container #mobile_hero_content .content h1 {
+    font-size: 115.2px;
+    line-height: 124.80000000000001px;
+    margin-bottom: 30px;
+    letter-spacing: -3px
+}
+
+#mobile_hero_container #mobile_hero_content .content h3 {
+    font-family: 'GalanoGrotesque-Light';
+    font-size: 28.8px;
+    line-height: 32.800000000000004px;
+    letter-spacing: -.25px
+}
+
+@media screen and (max-height:750px) {
+    #mobile_hero_container #mobile_hero_content .content {
+        padding-top: 5rem
+    }
+
+    #mobile_hero_container #mobile_hero_content .content p {
+        font-size: 10.4px;
+        line-height: 11.200000000000001px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content h1 {
+        font-size: 88px;
+        line-height: 96px;
+        margin-bottom: 12px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content h3 {
+        font-size: 20.8px;
+        line-height: 22.400000000000002px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content .button {
+        margin-top: 8px;
+        font-size: 19.200000000000003px;
+        line-height: 22.400000000000002px;
+        padding: 1em 30%
+    }
+}
+
+@media only screen and (max-width:769px) {
+    #mobile_hero_container #mobile_hero_content .content {
+        padding-top: 5rem
+    }
+
+    #mobile_hero_container #mobile_hero_content .content p {
+        font-size: 10.4px;
+        line-height: 11.200000000000001px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content h1 {
+        font-size: 88px;
+        line-height: 96px;
+        margin-bottom: 12px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content h3 {
+        font-size: 20.8px;
+        line-height: 22.400000000000002px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content .button {
+        margin-top: 8px;
+        font-size: 18.400000000000002px;
+        line-height: 16.8px;
+        padding: .8em 30%
+    }
+}
+
+@media only screen and (max-width:450px) {
+    #mobile_hero_container #mobile_hero_content .content {
+        padding-top: 5rem
+    }
+
+    #mobile_hero_container #mobile_hero_content .content p {
+        font-size: 10.4px;
+        line-height: 11.200000000000001px;
+        padding-bottom: 15px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content h1 {
+        font-size: 43.2px;
+        line-height: 48px;
+        margin-bottom: 12px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content h2 {
+        font-size: 24px;
+        line-height: 25.6px;
+        margin-bottom: 15px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content h3 {
+        font-size: 12.8px;
+        line-height: 14.4px
+    }
+
+    #mobile_hero_container #mobile_hero_content .content .button {
+        margin-top: 8px;
+        font-size: 9.600000000000001px;
+        line-height: 11.200000000000001px;
+        padding: .6em 30%
+    }
+}
+
+@media only screen and (min-width:1025px) {
+    #main_menu {
+        position: absolute;
+        bottom: 0;
+        right: 50px
+    }
+
+    #main_menu ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #main_menu ul li {
+        float: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0
+    }
+
+    #main_menu li {
+        display: inline-block;
+        position: relative;
+    }
+
+    #main_menu li:last-child a {
+        padding-right: 0
+    }
+
+    #main_menu li:hover ul,#main_menu li.expanded ul {
+        max-height: 300px
+    }
+
+    #main_menu li:hover > a,#main_menu li.expanded > a {
+        color: #ef9021
+    }
+
+    #main_menu li.current_page_item > a,#main_menu li.current-menu-parent > a {
+        color: #ef9021
+    }
+
+    #main_menu ul ul {
+        background-color: #ef9021;
+        position: absolute;
+        top: 5.3rem;
+        left: 0;
+        padding: 2rem 0;
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        z-index: 4;
+        -webkit-transition: max-height .5s;
+        transition: max-height .5s;
+    }
+
+    #main_menu ul ul li {
+        display: block;
+        padding: 0 2rem;
+    }
+
+    #main_menu ul ul li:first-child {
+        padding-top: 2rem
+    }
+
+    #main_menu ul ul li:last-child {
+        padding-bottom: 2rem
+    }
+
+    #main_menu ul ul li.current_page_item a,#main_menu ul ul li.current-menu-item a {
+        color: #642200
+    }
+
+    #main_menu ul ul a {
+        color: #fff;
+        white-space: nowrap;
+        padding: .5rem;
+        font-size: 14px;
+    }
+
+    #main_menu ul ul a:hover {
+        color: #642200
+    }
+
+    #main_menu a {
+        font-size: 17px;
+        font-family: 'Bebas';
+        font-weight: normal;
+        color: #000;
+        text-decoration: none;
+        padding: 16px 8px 14px 8px;
+        display: block;
+        text-transform: uppercase;
+        word-spacing: 2px;
+    }
+
+    #main_menu a:hover {
+        color: #ef9021
+    }
+}
+
+@media only screen and (max-width:1025px) {
+    #main_menu {
+        display: none
+    }
+}
+
+@media only screen and (min-width:1025px) {
+    #main_menu_mobile {
+        display: none
+    }
+}
+
+@media only screen and (max-width:1025px) {
+    #main_menu_mobile {
+        pointer-events: none;
+        height: calc(100vh);
+        background-color: #ef9021;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        z-index: 2;
+        -webkit-transition: width .5s;
+        transition: width .5s
+    }
+
+    #main_menu_mobile.open {
+        pointer-events: auto
+    }
+
+    #main_menu_mobile:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ef9021;
+        height: 65px
+    }
+
+    #main_menu_mobile.open {
+        width: 275px
+    }
+
+    #main_menu_mobile nav > ul {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+
+    #main_menu_mobile nav > ul li {
+        float: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0
+    }
+
+    #main_menu_mobile nav > ul > li {
+        display: block;
+    }
+
+    #main_menu_mobile nav > ul > li a {
+        font-family: 'Bebas';
+        font-weight: normal;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 23px;
+        text-align: right;
+        padding: 7px 30px;
+        width: 275px;
+        word-spacing: 2px;
+    }
+
+    #main_menu_mobile nav > ul > li a.focused {
+        background-color: #eb6723
+    }
+
+    #main_menu_mobile nav > ul > li.current-menu-item > a {
+        background-color: #eb6723
+    }
+
+    #main_menu_mobile nav > ul > li ul {
+        padding: 0;
+        margin: 0
+    }
+
+    #main_menu_mobile nav > ul > li li.current-menu-item > a {
+        background-color: #eb6723
+    }
+
+    #main_menu_mobile nav > ul > li li a {
+        font-size: 16px;
+        padding: 7px 30px 7px 10px
+    }
+
+    #main_menu_mobile .main_menu_scroll_container {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        overflow-y: auto;
+        padding-top: 35px;
+        padding-bottom: 20px;
+    }
+
+    #main_menu_mobile .main_menu_scroll_container > a {
+        font-family: 'Bebas';
+        font-weight: normal;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 23px;
+        text-align: right;
+        padding: 7px 30px;
+        width: 275px;
+        word-spacing: 2px
+    }
+}
+
+@media only screen and (max-width:1025px) {
+    body.menu_open {
+        overflow: hidden;
+        position: fixed;
+        height: 0;
+        left: 0;
+        right: 0;
+        headeroverflow-y: scroll;
+        -webkit-overflow-scrolling: touch
+    }
+}
+
+body {
+    font-size: 62.5%;
+    margin: 0;
+    font-family: 'GalanoGrotesque-Regular';
+    font-weight: 500;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+body.admin-bar {
+    padding-top: 32px;
+}
+
+body.admin-bar div.site_container {
+    padding-top: 120px;
+}
+
+body.admin-bar div.site_container header {
+    top: 32px
+}
+
+body .page_body,body footer,body .below_footer {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0)
+}
+
+body.below_fold_loaded .page_body,body.below_fold_loaded footer,body.below_fold_loaded .below_footer {
+    opacity: 1;
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none
+}
+
+body.fonts_loaded,body.below_fold_loaded {
+    opacity: 1;
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none
+}
+
+div.site_container {
+    overflow: hidden;
+    position: relative;
+    padding-top: 100px;
+    -webkit-transition: padding .5s;
+    transition: padding .5s;
+}
+
+@media only screen and (max-width:1025px) {
+    div.site_container {
+        padding-top: 70px
+    }
+}
+
+.page_body {
+    position: relative;
+    overflow: hidden;
+    padding-top: 90px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.page_body > .content {
+    overflow: hidden;
+}
+
+.page_body > .content > section:first-child {
+    margin-top: 0;
+    padding-top: 0
+}
+
+@media only screen and (max-width:1025px) {
+    .page_body {
+        padding-top: 40px
+    }
+}
+
+.page-home-page .page_body {
+    padding-top: 0
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+.row {
+    width: auto;
+    max-width: 1300px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0 50px;
+}
+
+.row:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.row.wide,.row.narrow {
+    width: auto;
+    max-width: 1240px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0 50px
+}
+
+.row.wide:after,.row.narrow:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.row.collapse {
+    padding: 0
+}
+
+@media only screen and (max-width:1025px) {
+    .row {
+        padding: 0 50px
+    }
+
+    .row.collapse_on_mobile {
+        padding: 0
+    }
+
+    .row.narrow {
+        padding: 0 20px
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .row {
+        padding: 0 20px
+    }
+}
+
+.modaal-wrapper .popup_content {
+    padding: 2rem 4rem;
+    position: relative;
+}
+
+.modaal-wrapper .popup_content .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media only screen and (max-width:1025px) {
+    .modaal-wrapper .popup_content {
+        padding: 4.5rem 1rem 1rem 1rem
+    }
+
+    .modaal-wrapper .popup_content img {
+        width: 100%;
+        margin: 0
+    }
+
+    .modaal-wrapper .popup_content h3:nth-child(2) {
+        margin-right: 4rem
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .modaal-wrapper .popup_content {
+        padding: 3rem 1rem 1rem 1rem
+    }
+}
+
+@media only screen and (min-width:1025px) {
+    .modaal-wrapper .popup_content img {
+        max-width: 50%
+    }
+}
+
+.modaal-wrapper .modaal-content-container {
+    padding: 3rem;
+}
+
+@media only screen and (max-width:1025px) {
+    .modaal-wrapper .modaal-content-container {
+        padding: 1.5rem
+    }
+}
+
+h1 {
+    font-family: 'Bebas';
+    font-weight: normal;
+    font-size: 4.9vw;
+    line-height: 5vw;
+    margin: -10px 0 35px 0;
+    word-spacing: 15px;
+}
+
+@media only screen and (max-width:1025px) {
+    h1 {
+        font-size: 44.800000000000004px;
+        line-height: 48px;
+        margin: -10px 0 28px 0
+    }
+}
+
+@media only screen and (max-width:769px) {
+    h1 {
+        word-spacing: 8px
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    h1 {
+        font-size: 91.2px;
+        line-height: 96px
+    }
+}
+
+h2 {
+    font-family: 'Bebas';
+    font-weight: normal;
+    color: #eb6723;
+    font-size: 57.6px;
+    line-height: 57.6px;
+    margin: 30px 0;
+    word-spacing: 10px;
+}
+
+@media only screen and (max-width:1025px) {
+    h2 {
+        font-size: 44.800000000000004px;
+        line-height: 46.400000000000006px
+    }
+}
+
+h3 {
+    font-family: 'GalanoGrotesque-Light';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28.8px;
+    margin: 0 0 10px 0;
+}
+
+h3.large {
+    font-size: 33.6px;
+    line-height: 38.400000000000006px
+}
+
+@media only screen and (max-width:1025px) {
+    h3 {
+        font-size: 16.8px;
+        line-height: 21.6px
+    }
+}
+
+h4 {
+    font-family: 'Bebas';
+    font-weight: normal;
+    color: #ef9021;
+    font-size: 29px;
+    line-height: 35px;
+    letter-spacing: -.3px;
+}
+
+h4 a {
+    color: #ef9021;
+    text-decoration: none;
+    font-weight: normal
+}
+
+h5 {
+    font-family: 'GalanoGrotesque-Light';
+    font-weight: 300;
+    font-size: 1.15vw;
+    line-height: 1.5vw;
+    margin: 10px 0;
+}
+
+@media only screen and (min-width:1920px) {
+    h5 {
+        font-size: 22px;
+        line-height: 28px
+    }
+}
+
+@media only screen and (max-width:1025px) {
+    h5 {
+        font-size: 22px;
+        line-height: 28px
+    }
+}
+
+h6 {
+    font-family: 'GalanoGrotesque-Light';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 10px 0
+}
+
+p {
+    font-family: 'GalanoGrotesque-Regular';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #000;
+    margin: 10px 0;
+}
+
+p iframe {
+    max-width: 100%;
+}
+
+@media only screen and (max-width:1025px) {
+    p iframe {
+        width: 100vw;
+        height: 60vw
+    }
+}
+
+p strong {
+    font-family: 'GalanoGrotesque-Medium';
+    font-weight: 700
+}
+
+p img {
+    display: block;
+    margin: 0 1rem 1rem 1rem;
+}
+
+p img.alignright {
+    float: right
+}
+
+p.medium {
+    font-size: 16px;
+    line-height: 20.8px
+}
+
+p.large {
+    font-size: 19.200000000000003px;
+    line-height: 27.200000000000003px;
+    letter-spacing: -1px
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+p:last-child .button {
+    margin-bottom: 0
+}
+
+p .button {
+    margin: 20px 0 0 0
+}
+
+@media only screen and (max-width:1025px) {
+    p {
+        font-size: 16px;
+        line-height: 20px
+    }
+
+    p.medium {
+        font-size: 16px;
+        line-height: 22px
+    }
+
+    p.large {
+        font-size: 18px;
+        line-height: 22px
+    }
+}
+
+img.alignright {
+    float: right;
+    margin: 0 20px 20px 20px
+}
+
+img.alignleft,float: left {
+    margin: 0 20px 20px 20px
+}
+
+img.alignright {
+    float: right;
+    margin: .2em 0 1em 1em
+}
+
+img.alignleft {
+    float: left;
+    margin: .2em 1em 1em 0
+}
+
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+img.alignnone {
+    display: block;
+    margin: 3.5rem 0
+}
+
+@media only screen and (max-width:1025px) {
+    img.alignright,img.alignleft {
+        margin: 0 20px 20px 0
+    }
+}
+
+@media only screen and (max-width:769px) {
+    img.alignright,img.alignleft {
+        float: none
+    }
+}
+
+span.small {
+    font-size: .7em
+}
+
+.content > *:first-child {
+    margin-top: 0
+}
+
+.content ul {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 1.5rem
+}
+
+.content a {
+    color: #ef9021;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content a.black {
+    color: #000
+}
+
+.content h4 {
+    font-family: 'Bebas';
+    font-weight: normal;
+    color: #ef9021;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: -.3px;
+}
+
+.content h4 a {
+    color: #ef9021;
+    text-decoration: none;
+    font-weight: normal
+}
+
+sup {
+    font-size: .5em
+}
+
+table.information_grid {
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    margin: -25px 0;
+}
+
+table.information_grid h3 {
+    font-size: 80px;
+    line-height: 68px;
+    margin-bottom: 14px
+}
+
+table.information_grid p {
+    font-size: 17.6px;
+    line-height: 17.6px
+}
+
+table.information_grid td {
+    vertical-align: top;
+    padding: 2.2rem 2rem 4.8rem 2rem
+}
+
+@media only screen and (max-width:1025px) {
+    table.information_grid {
+        margin: 0 0 -75px 0
+    }
+
+    table.information_grid h3 {
+        font-size: 52px;
+        line-height: 40px;
+        margin-bottom: 10px
+    }
+
+    table.information_grid p {
+        font-size: 11.200000000000001px;
+        line-height: 12px
+    }
+
+    table.information_grid td {
+        padding: 0 2rem 1rem 2rem;
+    }
+
+    table.information_grid td *:first-child {
+        margin-top: -30px
+    }
+}
+
+table.large {
+    font-size: 19.200000000000003px;
+    line-height: 28.8px;
+}
+
+table.large p {
+    font-size: 19.200000000000003px;
+    line-height: 28.8px
+}
+
+@media only screen and (max-width:1025px) {
+    table.large {
+        font-size: 12.8px;
+        line-height: 20.8px
+    }
+
+    table.large p {
+        font-size: 12.8px;
+        line-height: 20.8px
+    }
+}
+
+*.citation {
+    font-size: 14px;
+    line-height: 15px;
+}
+
+@media only screen and (max-width:1025px) {
+    *.citation {
+        font-size: 12px;
+        line-height: 13px
+    }
+}
+
+*.blue {
+    color: #1b75ba
+}
+
+*.orange {
+    color: #ef9021
+}
+
+*.collapse_bottom_margin {
+    margin-bottom: 0
+}
+
+*.collapse_margin {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+html {
+    font-size: 62.5%
+}
+
+body:not(.user_is_tabbing) *:focus {
+    outline: none
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body.admin-bar {
+    padding-top: 3.2rem
+}
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #1b75ba;
+    z-index: 5;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    -webkit-transition: top .5s;
+    transition: top .5s;
+}
+
+.skip-link:focus {
+    top: 0
+}
+
+.screenreader_only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}</style>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KTHNSKF');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="location-template-default single single-location postid-245 location-marin not-front">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTHNSKF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="site_container">
+
+        <a href="#main_content" class="skip-link">Skip to main content</a>
+
+            <section class="alert_bar">
+        <div class="alert_inner">
+            <a href="#" class="close">x</a>
+
+            
+            <div class="alert mobile_alert">
+                <p>We are excited to have resumed in-person operations at all of our 12 Northern California locations, introduced new virtual services and reduced our membership fees. <a href="" target="_self"></a></p>
+            </div>
+
+            <div class="alert desktop_alert">
+                <p>We are excited to have resumed in-person operations at all of our 12 Northern California locations, introduced new virtual services and reduced our membership fees. <a href="" target="_self"></a></p>
+            </div>
+
+
+        </div>
+    </section>
+
+        <header>
+            <div class="row">
+                <a class="logo" href="/">
+                    <img alt="Logo" src="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/images/header_logo_tagline.svg" />
+                </a>
+
+                <div class="login">
+                    <p><a class="physician_link" href="/physicians/">for physicians</a></p>
+                    <a href="https://my.jumpstartmd.com/login" target="_blank" class="button white small with_icon">member login</a>
+                    <h4>CALL <a target="_blank" href="tel:18555867782" class="headercall">1.855.586.7782</a></h4>
+                </div>
+
+                <button id="menu_toggle"><span class="screenreader_only">Toggle menu</span></button>
+
+                <div id="main_menu">
+                    <nav aria-label="Main Menu" class="menu-main-menu-container"><ul id="menu-main-menu" class=""><li id="menu-item-9597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9597"><a href="https://dev-jumpstartmd.pantheonsite.io/membership-options/">Membership Options</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-13"><a href="https://dev-jumpstartmd.pantheonsite.io/testimonials/">Success Stories</a>
+<ul class="sub-menu">
+    <li id="menu-item-9370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9370"><a href="https://dev-jumpstartmd.pantheonsite.io/weight-loss-outcomes/">Results</a></li>
+</ul>
+</li>
+<li id="menu-item-15" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-15"><a href="https://dev-jumpstartmd.pantheonsite.io/services/">What We Do</a>
+<ul class="sub-menu">
+    <li id="menu-item-1675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1675"><a href="https://dev-jumpstartmd.pantheonsite.io/services/">Our Services</a></li>
+    <li id="menu-item-823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-823"><a href="https://dev-jumpstartmd.pantheonsite.io/services/weight-loss/">Weight Loss</a></li>
+    <li id="menu-item-821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="https://dev-jumpstartmd.pantheonsite.io/services/bhrt/">BHRT</a></li>
+    <li id="menu-item-822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="https://dev-jumpstartmd.pantheonsite.io/services/cardio-health/">Cardiometabolic Health</a></li>
+    <li id="menu-item-10171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10171"><a href="https://dev-jumpstartmd.pantheonsite.io/faq/">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="https://dev-jumpstartmd.pantheonsite.io/team/">Team</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="https://dev-jumpstartmd.pantheonsite.io/locations/">Locations</a></li>
+<li id="menu-item-3098" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3098"><a href="https://dev-jumpstartmd.pantheonsite.io/insurance/">Insurance</a></li>
+</ul></nav>             </div>
+
+                <!-- match-window-height="-145" -->
+                <div id="main_menu_mobile" match-window-height="">
+                    <div class="main_menu_scroll_container">
+                        <nav aria-label="Mobile Menu" class="menu-mobile-menu-container"><ul id="menu-mobile-menu" class=""><li id="menu-item-9596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9596"><a href="https://dev-jumpstartmd.pantheonsite.io/membership-options/">Membership Options</a></li>
+<li id="menu-item-1670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1670"><a href="https://dev-jumpstartmd.pantheonsite.io/testimonials/">Success Stories</a></li>
+<li id="menu-item-1668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1668"><a href="https://dev-jumpstartmd.pantheonsite.io/services/">What We Do</a></li>
+<li id="menu-item-1669" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1669"><a href="https://dev-jumpstartmd.pantheonsite.io/team/">Team</a></li>
+<li id="menu-item-1671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1671"><a href="https://dev-jumpstartmd.pantheonsite.io/locations/">Locations</a></li>
+<li id="menu-item-3099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3099"><a href="https://dev-jumpstartmd.pantheonsite.io/insurance/">Insurance</a></li>
+</ul></nav>                     <a href="/physicians/">FOR PHYSICIANS</a>
+                        <a href="/login/">MEMBER LOGIN</a>
+                        <a href="tel:18555867782" class="navcall">CALL US</a>
+                    </div>
+
+                </div>
+            </div>
+
+                        <a href="https://dev-jumpstartmd.pantheonsite.io/lets-talk/" target="" class="wellness_tips">
+                Get Started         </a>
+                    </header>
+
+
+    <section id="location_hero">
+        <div class="dropshadow"></div>
+                <div class="image_column">
+            <div class="image" lazy-background="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/03/Marin.jpg"></div>
+        </div>
+        <div class="location_info content">
+            <h1 class="blue">Marin</h1>
+            <div class="row collapse">
+                <div class="address">
+                    <p class="medium"><strong>350 Bon Air Center</strong><br />
+<strong> Suite 240</strong><br />
+<strong> Greenbrae, CA 94904</strong><br />
+<strong> <a class="black" href="tel:4158524896">415.852.4896</a></strong></p>
+<p><script type="text/javascript" src="http://local.birdeye.com/embed/v6/159476737495202/1/1469728467/3abc805603467329c6785d716a3a4ab312eae63f8d23fd26"></script></p>
+<div id="bf-revz-widget-1469728467"></div>
+                    <p class="medium orange">New Patient Inquiries:<br>
+                    <a href="tel:18555867782" class="bodycall"><strong>1.855.JUMPSTART</strong></a></p>
+                </div>
+                <div class="hours">
+                    <table class=" medium">
+<tbody>
+<tr>
+<td>Monday:</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td>Tuesday:</td>
+<td>Closed</td>
+</tr>
+<tr>
+<td>Wednesday:</td>
+<td>7:00am-1:00pm</td>
+</tr>
+<tr>
+<td>Thursday:</td>
+<td>7:00am-1:00pm</td>
+</tr>
+<tr>
+<td>Friday:</td>
+<td>7:00am-1:00pm</td>
+</tr>
+<tr>
+<td>Saturday:</td>
+<td>7:00am-12:00pm</td>
+</tr>
+</tbody>
+</table>
+<p class="medium">
+                </div>
+            </div>
+            <a class="button orange medium" target="_blank" href="https://goo.gl/maps/TYEZWkHSa952">MAP &amp; DIRECTIONS</a>
+        </div>
+    </section>
+
+    <div class="page_body">
+        <div class="dropshadow"></div>
+
+        
+            <div class="row location_wrapper">
+                <div class="team_column">
+                    <h3>Team</h3>
+                    <section class="location_team">
+                        
+                            <div class="team_row row row_even">
+                                <div class="image" lazy-background="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/03/Kate_McElroy_PA-C.jpg"></div>
+                                <div class="content">
+                                    <h3 class="blue">Kate McElroy, <span class="small">PA-C</span></h3>
+                                    <p>Center Manager, Marin</p>
+                                                                            <a href="#modal_1" data-modaal-hide-close="true" class="modaal open_modal icon_button plus"></a>
+                                                                        <div id="modal_1" class="popup_content_wrapper">
+                                        <div class="popup_content team_popup">
+                                            <button type="button" class="icon_button close" aria-label="Close (Press escape to close)"><span>Close</span></button>
+                                                <img src="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/03/Kate_McElroy_PA-C.jpg" alt="" width="713" height="433"  />                                         <div class="left_column">
+                                                <h3 class="blue">Kate McElroy, <span class="small">PA-C</span></h3>
+                                                <p class="large">Center Manager</p>
+                                                <p class="p1">Kate has a history of working in the health wellness and fitness industries, and practices preemptive medicine with a focus on nutrition education, lifestyle modification/behavior change, and positive psychology. Through the management of a variety of chronic health conditions including being overweight, obesity, diabetes, hypertension, and hyperlipidemia, she concentrates on the overarching goal of sustained weight loss and heightens physical and mental well-being. Kate is a Certified Physician Assistant and Harvard Certified Lifestyle Medicine Coach and a graduate of Stanford University.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
+                        
+                                <div class="team_row row row_even">
+                                    <div class="image" lazy-background="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/02/FrancesStrezempkoAhmad.jpg"></div>
+                                    <div class="content">
+                                        <p class="blue">Frances Strzempko Ahmad, <span class="small">PhD, NP-C</span></p>
+<p>Clinician,<br />
+Marin</p>
+                                                                                    <a href="#modal_2" data-modaal-hide-close="true" class="modaal open_modal icon_button plus"></a>
+                                                                                <div id="modal_2" class="popup_content_wrapper">
+                                            <div class="popup_content team_popup">
+                                                <button type="button" class="icon_button close" aria-label="Close (Press escape to close)"><span>Close</span></button>
+                                                    <img src="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/02/FrancesStrezempkoAhmad.jpg" alt="" width="713" height="433"  />                                                <div class="left_column">
+                                                    <h3 class="blue">Frances Strzempko Ahmad</h3>
+<p class="medium large">Clinician</p>
+<p class="p1">Fran brings diverse experiences to her role at JumpstartMD, having guided her entire career with a patient-centered philosophy. She has a passion for improving people’s lives in a holistic and natural way through bioidentical hormones and lifestyle change. Fran prides herself on being able to provide a safe space for discussing intimate matters with a style that is comfortable yet professional. She received her BS and MS from the University of Massachusetts, Amherst and her PhD and Nurse Practitioner training at the University of California, San Francisco. She has worked as a perinatal and labor and delivery nurse, has taught undergraduate nursing as a clinical faculty member, and had her doctoral research on the impact of endometriosis on the couple relationship funded by NIH. She is also a Board Certified Psychiatric Mental Health Nurse Practitioner.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                                <div class="team_row row row_even">
+                                    <div class="image" lazy-background="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/02/CarolR_Pili.jpg"></div>
+                                    <div class="content">
+                                        <p class="blue">Carol Pili</p>
+<p>Clinical Care Coordinator,<br />
+Marin</p>
+                                                                                    <a href="#modal_3" data-modaal-hide-close="true" class="modaal open_modal icon_button plus"></a>
+                                                                                <div id="modal_3" class="popup_content_wrapper">
+                                            <div class="popup_content team_popup">
+                                                <button type="button" class="icon_button close" aria-label="Close (Press escape to close)"><span>Close</span></button>
+                                                    <img src="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/02/CarolR_Pili.jpg" alt="" width="713" height="433"  />                                               <div class="left_column">
+                                                    <p>Carol studied Physiology and Health Science at Santa Rosa Junior College and enjoys supporting others on their wellness journeys. She lives a very active lifestyle, competing in triathlons and other running events. Carol applies her personal training discipline to her role at JumpstartMD, and helps people understand the importance of a healthy lifestyle and learn how to achieve their goals.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                                <div class="team_row row row_even">
+                                    <div class="image" lazy-background="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/02/EmilyTomokoKujoLand.jpg"></div>
+                                    <div class="content">
+                                        <p class="blue">Emily Tomoko Kujo Land</p>
+<p>Health Coach,<br />
+Marin</p>
+                                                                                    <a href="#modal_4" data-modaal-hide-close="true" class="modaal open_modal icon_button plus"></a>
+                                                                                <div id="modal_4" class="popup_content_wrapper">
+                                            <div class="popup_content team_popup">
+                                                <button type="button" class="icon_button close" aria-label="Close (Press escape to close)"><span>Close</span></button>
+                                                    <img src="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/02/EmilyTomokoKujoLand.jpg" alt="" width="713" height="433"  />                                               <div class="left_column">
+                                                    <h3 class="blue">Emily Tomoko Kujo Land</h3>
+<p class="large">Health Coach</p>
+<p class="p1">Emily brings ten years of client and customer service experience in the public relations and design/presentations industries, as well as a lifelong passion and enthusiasm for health and wellness to JumpstartMD. She boasts a patient and empathetic ear as the result of past personal, weight issues and ongoing digestive issues, and a natural ability to connect with people to help them to reach their goals.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                                <div class="team_row row row_even">
+                                    <div class="image" lazy-background="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/02/Jamie_Campbell.jpg"></div>
+                                    <div class="content">
+                                        <p class="blue">Jamie Campbell</p>
+<p>Health Coach,<br />
+Marin</p>
+                                                                                    <a href="#modal_5" data-modaal-hide-close="true" class="modaal open_modal icon_button plus"></a>
+                                                                                <div id="modal_5" class="popup_content_wrapper">
+                                            <div class="popup_content team_popup">
+                                                <button type="button" class="icon_button close" aria-label="Close (Press escape to close)"><span>Close</span></button>
+                                                    <img src="https://dev-jumpstartmd.pantheonsite.io/wp-content/uploads/2018/02/Jamie_Campbell.jpg" alt="" width="713" height="433"  />                                                <div class="left_column">
+                                                    <h3 class="blue">Jamie Campbell</h3>
+<p class="large">Health Coach</p>
+<p class="p1">Jamie first started health coaching with a strong desire to provide guidance and encouragement to those seeking to improve their health and wellness. She fully believes that practicing proper nutrition in conjunction with physical activity allows for better lived, more fulfilled lives. As both a Health Coach at JumpstartMD and a Certified Personal Trainer, she is able to help her clients improve their overall quality of life.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                    </section>
+
+                                    </div>
+                <div class="content_column">
+                    <div class="content">
+
+    
+    
+<div class="basic_wysiwyg">
+    <div class="dropshadow"></div>
+
+    <div class="row narrow">
+        <div class="content">
+            <p class="p1">Our Marin center is conveniently located in Bon Air Shopping Center in Greenbrae and has plenty of free parking right outside. Our office is in the same shopping center as Mollie Stone’s, but at the opposite end of the shopping center. We are located on the second floor of Building #350 (above Zephyr Real Estate and across from One Medical.) Our experienced team of health care professionals specialize in diabetes management, behavioral medicine, nutrition, fitness and digestive issues, and is committed to helping you achieve all your health and wellness goals.</p>
+<p>Note that our Bioidentical Hormone Replacement Therapy (BHRT) hours may extend beyond normal office hours. Call the office for more details.</p>
+<p>&nbsp;</p>
+<h3>Services</h3>
+<p class="p1">JumpstartMD is helping thousands of people to lose weight and live healthier lives through personalized wellness programs. Medically supervised and based on extensive clinical research, JumpstartMD is centered on the nutritional science and one-on-one support making a real difference. We offer:</p>
+<table>
+<tbody>
+<tr>
+<td>• Weight Loss Programs</td>
+<td>• Diabetes Reversal Therapy</td>
+</tr>
+<tr>
+<td>• Weight Management Plans</td>
+<td>• Obesity Management</td>
+</tr>
+<tr>
+<td>• Bioidentical Hormone Therapy</td>
+<td>• Hypertension Treatment</td>
+</tr>
+<tr>
+<td>• Cardiometabolic Health</td>
+<td>• Metabolic Syndrome Management</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>We look forward to learning about how we can help you live the life you deserve.</p>
+        </div>
+    </div>
+</div>
+
+</div>              </div>
+            </div>
+
+            <div class="content">
+
+    
+    
+<div class="multi_column_content_over_image  dark" >
+    <div class="dropshadow"></div>
+    
+    <div class="row narrow columns_2">
+
+        
+            <div class="content normal column_1">
+                <h2>YOU GOT THIS.</h2>
+<p class="medium">Improve your health and wellness today and transform your aspirations into lasting results.</p>
+            </div>
+
+        
+            <div class="content normal column_2">
+                <h4><a class="sfcall" href="tel:18555867782">Call 1.855.JUMPSTART</a></h4>
+<p><a class="button orange medium sfcta" href="/lets-talk/">GET STARTED</a></p>
+            </div>
+
+        
+    </div>
+
+    <div class="row">
+            </div>
+</div>
+
+</div>
+        
+    </div>
+
+
+
+    <footer>
+        <div class="row" match-sibling-heights="3" match-on-mobile="0" match-on-tablet="0">
+            <div class="left">
+                <a class="logo" href="/">
+                    <img alt="Logo" src="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/images/footer_logo.svg" />
+                </a>
+            </div>
+            <div class="center">
+                <nav aria-label="Main menu" class="menu-main-menu-container"><ul id="menu-main-menu-1" class=""><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9597"><a href="https://dev-jumpstartmd.pantheonsite.io/membership-options/">Membership Options</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-13"><a href="https://dev-jumpstartmd.pantheonsite.io/testimonials/">Success Stories</a>
+<ul class="sub-menu">
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9370"><a href="https://dev-jumpstartmd.pantheonsite.io/weight-loss-outcomes/">Results</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-15"><a href="https://dev-jumpstartmd.pantheonsite.io/services/">What We Do</a>
+<ul class="sub-menu">
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1675"><a href="https://dev-jumpstartmd.pantheonsite.io/services/">Our Services</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-823"><a href="https://dev-jumpstartmd.pantheonsite.io/services/weight-loss/">Weight Loss</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-821"><a href="https://dev-jumpstartmd.pantheonsite.io/services/bhrt/">BHRT</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="https://dev-jumpstartmd.pantheonsite.io/services/cardio-health/">Cardiometabolic Health</a></li>
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10171"><a href="https://dev-jumpstartmd.pantheonsite.io/faq/">FAQs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="https://dev-jumpstartmd.pantheonsite.io/team/">Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="https://dev-jumpstartmd.pantheonsite.io/locations/">Locations</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3098"><a href="https://dev-jumpstartmd.pantheonsite.io/insurance/">Insurance</a></li>
+</ul></nav>
+                <nav aria-label="Footer menu" class="menu-footer-menu-container"><ul id="menu-footer-menu" class=""><li id="menu-item-128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="https://dev-jumpstartmd.pantheonsite.io/about/">Company</a></li>
+<li id="menu-item-125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125"><a href="https://dev-jumpstartmd.pantheonsite.io/careers/">Careers</a></li>
+<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="https://dev-jumpstartmd.pantheonsite.io/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a href="https://dev-jumpstartmd.pantheonsite.io/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-5194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5194"><a href="https://dev-jumpstartmd.pantheonsite.io/weight-loss-outcomes/">Weight Loss Results</a></li>
+</ul></nav>             <ul>
+                    <li>
+                        <a href="/physicians/">For Physicians</a>
+                    </li>
+                    <li>
+                        <a href="https://my.jumpstartmd.com/login">Member Login</a>
+                    </li>
+                    <li>
+                        <a href="https://join.jumpstartmd.com/weight-of-the-nation-2018/">Conference</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="right">
+                <noscript class="ninja-forms-noscript-message">
+    Notice: JavaScript is required for this content.</noscript><div id="nf-form-6-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-6" aria-describedby="nf-form-errors-6" role="form">
+
+    <div class="nf-loading-spinner"></div>
+
+</div>
+        <!-- TODO: Move to Template File. -->
+        <script>var formDisplay=1;var nfForms=nfForms||[];var form=[];form.id='6';form.settings={"objectType":"Form Setting","editActive":true,"title":"Newsletter Signup - Footer","created_at":"2019-03-20 10:21:14","default_label_pos":"above","show_title":"0","clear_complete":"1","hide_complete":"1","logged_in":"0","wrapper_class":"","element_class":"","add_submit":"0","currency":"","unique_field_error":"A form with this value has already been submitted.","not_logged_in_msg":"","sub_limit_msg":"The form has reached its submission limit.","calculations":[],"container_styles_show_advanced_css":"0","title_styles_show_advanced_css":"0","row_styles_show_advanced_css":"0","row-odd_styles_show_advanced_css":"0","success-msg_styles_show_advanced_css":"0","error_msg_styles_show_advanced_css":"0","formContentData":[{"order":1,"cells":[{"order":0,"fields":["html_1526345189920"],"width":"100"}]},{"order":4,"cells":[{"order":0,"fields":["email_1526065594479"],"width":"75"},{"order":1,"fields":["get_it_1552503166114"],"width":"25"}]}],"changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","drawerDisabled":false,"key":"","container_styles_border":"","container_styles_height":"","container_styles_margin":"","container_styles_padding":"","container_styles_float":"","title_styles_border":"","title_styles_height":"","title_styles_width":"","title_styles_font-size":"","title_styles_margin":"","title_styles_padding":"","title_styles_float":"","row_styles_border":"","row_styles_width":"","row_styles_font-size":"","row_styles_margin":"","row_styles_padding":"","row-odd_styles_border":"","row-odd_styles_height":"","row-odd_styles_width":"","row-odd_styles_font-size":"","row-odd_styles_margin":"","row-odd_styles_padding":"","success-msg_styles_border":"","success-msg_styles_height":"","success-msg_styles_width":"","success-msg_styles_font-size":"","success-msg_styles_margin":"","success-msg_styles_padding":"","error_msg_styles_border":"","error_msg_styles_width":"","error_msg_styles_font-size":"","error_msg_styles_margin":"","error_msg_styles_padding":"","allow_public_link":0,"embed_form":"","ninjaForms":"Ninja Forms","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formHoneypot":"If you are a human seeing this field, please leave it empty.","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"&#36;","thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"0","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"currency_symbol":"","beforeForm":"","beforeFields":"","afterFields":"","afterForm":""};form.fields=[{"objectType":"Field","objectDomain":"fields","editActive":false,"order":1,"type":"html","label":"HTML","default":"<p>Get JumpstartMD info and tips<\/p>","container_class":"","element_class":"","wrap_styles_show_advanced_css":0,"label_styles_show_advanced_css":0,"element_styles_show_advanced_css":0,"cellcid":"c3261","key":"html_1526345189920","drawerDisabled":false,"created_at":"2019-03-20 10:21:14","id":33,"beforeField":"","afterField":"","value":"<p>Get JumpstartMD info and tips<\/p>","label_pos":"above","parentType":"html","element_templates":["html","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":2,"type":"email","label":"Email","key":"email_1526065594479","label_pos":"hidden","required":1,"default":"","placeholder":"Email","container_class":"","element_class":"","admin_label":"","help_text":"","custom_name_attribute":"email","wrap_styles_show_advanced_css":0,"label_styles_show_advanced_css":0,"element_styles_show_advanced_css":0,"cellcid":"c3265","personally_identifiable":1,"wrap_styles_border":"","wrap_styles_width":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_float":"","label_styles_border":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_float":"","element_styles_border":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_float":"","drawerDisabled":"","created_at":"2019-03-20 10:21:14","value":"","id":34,"beforeField":"","afterField":"","parentType":"email","element_templates":["email","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":3,"type":"submit","label":"GET IT","processing_label":"Processing","container_class":"","element_class":"","key":"get_it_1552503166114","wrap_styles_show_advanced_css":0,"element_styles_show_advanced_css":0,"submit_element_hover_styles_show_advanced_css":0,"cellcid":"c3267","drawerDisabled":"","created_at":"2019-03-20 10:21:14","id":35,"beforeField":"","afterField":"","value":"","label_pos":"above","parentType":"textbox","element_templates":["submit","button","input"],"old_classname":"","wrap_template":"wrap-no-label"}];nfForms.push(form);</script>
+                <script id="nf-tmpl-cell" type="text/template">
+            <nf-fields></nf-fields>
+        </script>
+
+        <script id="nf-tmpl-row" type="text/template">
+            <nf-cells></nf-cells>
+        </script>
+
+                        <div class="bottom">
+                    <p>Get in Touch</p>
+                    <h4 class="collapse_margin">CALL <a target="_blank" href="tel:18555867782" class="footercall">1.855.586.7782</a></h4>
+                </div>
+            </div>
+            <div class="mobile_logo">
+                <a class="logo" href="/">
+                    <img alt="Logo" src="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/images/footer_logo.svg" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <section class="below_footer" aria-label="Below footer">
+        <div class="row">
+            <div class="social">
+                <a target="_blank" href="https://www.instagram.com/jumpstartmd"><img alt="Instagram Logo" src="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/images/instagram.svg" /></a>
+                <a target="_blank" href="https://www.facebook.com/JumpstartMD/"><img alt="Facebook Logo" src="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/images/facebook.svg" /></a>
+                <a target="_blank" href="https://www.youtube.com/user/JumpstartMD"><img alt="Youtube Logo" src="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/images/youtube.svg" /></a>
+            </div>
+            <div class="copyright">
+                &copy; 2020 JumpstartMD, Inc. | All Rights Reserved
+            </div>
+        </div>
+    </section>
+
+    <link rel='stylesheet' id='dashicons-css'  href='https://dev-jumpstartmd.pantheonsite.io/wp-includes/css/dashicons.min.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='nf-display-css'  href='https://dev-jumpstartmd.pantheonsite.io/wp-content/plugins/ninja-forms/assets/css/display-structure.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='nf-layout-front-end-css'  href='https://dev-jumpstartmd.pantheonsite.io/wp-content/plugins/ninja-forms-style/layouts/assets/css/display-structure.css?ver=3.0.26' type='text/css' media='all' />
+<script type='text/javascript' defer src='https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/js/built/site.compiled.min.js?ver=ad42de5' id='theme-js-js'></script>
+<script type='text/javascript' defer src='https://dev-jumpstartmd.pantheonsite.io/wp-includes/js/wp-embed.min.js?ver=5.5.1' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://dev-jumpstartmd.pantheonsite.io/wp-includes/js/underscore.min.js?ver=1.8.3' id='underscore-js'></script>
+<script type='text/javascript' src='https://dev-jumpstartmd.pantheonsite.io/wp-includes/js/backbone.min.js?ver=1.4.0' id='backbone-js'></script>
+<script type='text/javascript' defer src='https://dev-jumpstartmd.pantheonsite.io/wp-content/plugins/ninja-forms/assets/js/min/front-end-deps.js?ver=3.4.30' id='nf-front-end-deps-js'></script>
+<script type='text/javascript' id='nf-front-end-js-extra'>
+/* <![CDATA[ */
+var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","formHoneypot":"If you are a human seeing this field, please leave it empty.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"$","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"0","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"]};
+var nfFrontEnd = {"adminAjax":"https:\/\/dev-jumpstartmd.pantheonsite.io\/wp-admin\/admin-ajax.php","ajaxNonce":"7dcc6e76b1","requireBaseUrl":"https:\/\/dev-jumpstartmd.pantheonsite.io\/wp-content\/plugins\/ninja-forms\/assets\/js\/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr","mailchimp-optin":"mailchimp-optin"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr","mailchimp-optin":"mailchimp-optin"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr","mailchimp-optin":"mailchimp-optin"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr","mailchimp-optin":"mailchimp-optin"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown"}},"opinionated_styles":""};
+/* ]]> */
+</script>
+<script type='text/javascript' defer src='https://dev-jumpstartmd.pantheonsite.io/wp-content/plugins/ninja-forms/assets/js/min/front-end.js?ver=3.4.30' id='nf-front-end-js'></script>
+<script type='text/javascript' defer src='https://dev-jumpstartmd.pantheonsite.io/wp-content/plugins/ninja-forms-style/layouts/assets/js/min/front-end.js?ver=3.0.26' id='nf-layout-front-end-js'></script>
+<script id="tmpl-nf-layout" type="text/template">
+    <span id="nf-form-title-{{{ data.id }}}" class="nf-form-title">
+        {{{ ( 1 == data.settings.show_title ) ? '<h3>' + data.settings.title + '</h3>' : '' }}}
+    </span>
+    <div class="nf-form-wrap ninja-forms-form-wrap">
+        <div class="nf-response-msg"></div>
+        <div class="nf-debug-msg"></div>
+        <div class="nf-before-form"></div>
+        <div class="nf-form-layout"></div>
+        <div class="nf-after-form"></div>
+    </div>
+</script>
+
+<script id="tmpl-nf-empty" type="text/template">
+
+</script>
+<script id="tmpl-nf-before-form" type="text/template">
+    {{{ data.beforeForm }}}
+</script><script id="tmpl-nf-after-form" type="text/template">
+    {{{ data.afterForm }}}
+</script><script id="tmpl-nf-before-fields" type="text/template">
+    <div class="nf-form-fields-required">{{{ data.renderFieldsMarkedRequired() }}}</div>
+    {{{ data.beforeFields }}}
+</script><script id="tmpl-nf-after-fields" type="text/template">
+    {{{ data.afterFields }}}
+    <div id="nf-form-errors-{{{ data.id }}}" class="nf-form-errors" role="alert"></div>
+    <div class="nf-form-hp"></div>
+</script>
+<script id="tmpl-nf-before-field" type="text/template">
+    {{{ data.beforeField }}}
+</script><script id="tmpl-nf-after-field" type="text/template">
+    {{{ data.afterField }}}
+</script><script id="tmpl-nf-form-layout" type="text/template">
+    <form>
+        <div>
+            <div class="nf-before-form-content"></div>
+            <div class="nf-form-content {{{ data.element_class }}}"></div>
+            <div class="nf-after-form-content"></div>
+        </div>
+    </form>
+</script><script id="tmpl-nf-form-hp" type="text/template">
+    <label for="nf-field-hp-{{{ data.id }}}" aria-hidden="true">
+        {{{ nfi18n.formHoneypot }}}
+        <input id="nf-field-hp-{{{ data.id }}}" name="nf-field-hp" class="nf-element nf-field-hp" type="text" value=""/>
+    </label>
+</script>
+<script id="tmpl-nf-field-layout" type="text/template">
+    <div id="nf-field-{{{ data.id }}}-container" class="nf-field-container {{{ data.type }}}-container {{{ data.renderContainerClass() }}}">
+        <div class="nf-before-field"></div>
+        <div class="nf-field"></div>
+        <div class="nf-after-field"></div>
+    </div>
+</script>
+<script id="tmpl-nf-field-before" type="text/template">
+    {{{ data.beforeField }}}
+</script><script id="tmpl-nf-field-after" type="text/template">
+    <#
+    /*
+     * Render our input limit section if that setting exists.
+     */
+    #>
+    <div class="nf-input-limit"></div>
+    <#
+    /*
+     * Render our error section if we have an error.
+     */
+    #>
+    <div id="nf-error-{{{ data.id }}}" class="nf-error-wrap nf-error" role="alert"></div>
+    <#
+    /*
+     * Render any custom HTML after our field.
+     */
+    #>
+    {{{ data.afterField }}}
+</script>
+<script id="tmpl-nf-field-wrap" type="text/template">
+    <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
+        <#
+        /*
+         * This is our main field template. It's called for every field type.
+         * Note that must have ONE top-level, wrapping element. i.e. a div/span/etc that wraps all of the template.
+         */
+        #>
+        <#
+        /*
+         * Render our label.
+         */
+        #>
+        {{{ data.renderLabel() }}}
+        <#
+        /*
+         * Render our field element. Uses the template for the field being rendered.
+         */
+        #>
+        <div class="nf-field-element">{{{ data.renderElement() }}}</div>
+        <#
+        /*
+         * Render our Description Text.
+         */
+        #>
+        {{{ data.renderDescText() }}}
+    </div>
+</script>
+<script id="tmpl-nf-field-wrap-no-label" type="text/template">
+    <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
+        <div class="nf-field-label"></div>
+        <div class="nf-field-element">{{{ data.renderElement() }}}</div>
+        <div class="nf-error-wrap"></div>
+    </div>
+</script>
+<script id="tmpl-nf-field-wrap-no-container" type="text/template">
+
+        {{{ data.renderElement() }}}
+
+        <div class="nf-error-wrap"></div>
+</script>
+<script id="tmpl-nf-field-label" type="text/template">
+    <div class="nf-field-label"><label for="nf-field-{{{ data.id }}}"
+                                       id="nf-label-field-{{{ data.id }}}"
+                                       class="{{{ data.renderLabelClasses() }}}">{{{ data.label }}} {{{ ( 'undefined' != typeof data.required && 1 == data.required ) ? '<span class="ninja-forms-req-symbol">*</span>' : '' }}} {{{ data.maybeRenderHelp() }}}</label></div>
+</script>
+<script id="tmpl-nf-field-error" type="text/template">
+    <div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
+</script><script id="tmpl-nf-form-error" type="text/template">
+    <div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
+</script><script id="tmpl-nf-field-input-limit" type="text/template">
+    {{{ data.currentCount() }}} {{{ nfi18n.of }}} {{{ data.input_limit }}} {{{ data.input_limit_msg }}}
+</script><script id="tmpl-nf-field-null" type="text/template">
+</script><script id="tmpl-nf-field-html" type="text/template">
+    {{{ data.value }}}
+</script>
+
+
+<script id='tmpl-nf-field-input' type='text/template'>
+    <input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ data.value }}}" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}}
+           aria-labelledby="nf-label-field-{{{ data.id }}}"
+
+            {{{ data.maybeRequired() }}}
+    >
+</script>
+<script id="tmpl-nf-field-email" type="text/template">
+    <input
+            type="email"
+            value="{{{ data.value }}}"
+            class="{{{ data.renderClasses() }}} nf-element"
+
+            id="nf-field-{{{ data.id }}}"
+            <# if( ! data.disable_browser_autocompletes ){ #>
+            name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}"
+            autocomplete="email"
+            <# } else { #>
+            name="{{ data.custom_name_attribute || 'nf-field-' + data.id }}"
+            {{{ data.maybeDisableAutocomplete() }}}
+            <# } #>
+            {{{ data.renderPlaceholder() }}}
+            {{{ data.maybeDisabled() }}}
+
+            aria-invalid="false"
+            aria-describedby="nf-error-{{{ data.id }}}"
+            aria-labelledby="nf-label-field-{{{ data.id }}}"
+
+            {{{ data.maybeRequired() }}}
+    >
+</script>
+<script id="tmpl-nf-field-submit" type="text/template">
+    <input id="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element " type="button" value="{{{ data.label }}}" {{{ ( data.disabled ) ? 'disabled' : '' }}}>
+</script><script id='tmpl-nf-field-button' type='text/template'>
+    <button id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.classes }}} nf-element">
+        {{{ data.label }}}
+    </button>
+</script></div>
+
+<link rel="preload" id="footer_styles" href="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/css/compiled/all_footer_styles.css?ad42de5" as="style" onload="this.rel='stylesheet'; document.body.className += ' below_fold_loaded';">
+<noscript><link rel="stylesheet" href="https://dev-jumpstartmd.pantheonsite.io/wp-content/themes/jumpstart/css/compiled/all_footer_styles.css?ad42de5"></noscript>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bb8d113d51","applicationID":"148521933","transactionName":"YQNbZkQAX0cCAkMIXlhJeFFCCF5aTBJeD1ZaAxReWQJQQAoOWQ==","queueTime":0,"applicationTime":434,"atts":"TURYEAwaTEk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
